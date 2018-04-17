@@ -25,3 +25,22 @@
 - 펜딩된 게 있으면 다시 채굴하여 블락 생성 후 다시 펜딩 조회, 다시 송금 확인
 - 몇 ether 송금되었는지 확인
 > web3.fromWei(eth.getBalance(eth.accounts[1]), "ether")
+
+nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" 2>> blockTest/geth.log &
+
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["pass3"],"id":10}' localhost:8545
+
+
+위에 두개는 프로세스는 살아있는데 잘 안됨
+
+- solidity compiler 설치
+ 책에는 우분투 apt 기준으로 나와있어서 맥 기준
+> brew update
+> brew tap ethereum/ethereum
+> brew install solidity
+
+
+
+
