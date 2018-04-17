@@ -46,6 +46,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["
 /usr/local/Cellar/solidity/0.4.22
 이걸 설치하는데 엄청난 디펜던시들을 설치하고 30분 걸렸다. 맞는건가..  sqllite, openssl 
 
+인 줄 알았는데 which solc 날려보니 /usr/local/bin/solc
 
 
 
