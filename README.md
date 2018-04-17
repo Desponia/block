@@ -36,10 +36,16 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["
 위에 두개는 프로세스는 살아있는데 잘 안됨
 
 - solidity compiler 설치
- 책에는 우분투 apt 기준으로 나와있어서 맥 기준
+ 책에는 우분투 apt 기준으로 나와있어서 맥 기준 ( http://solidity.readthedocs.io/en/v0.4.21/installing-solidity.html 참고 )
 > brew update
+> brew upgrade
 > brew tap ethereum/ethereum
 > brew install solidity
+
+내 솔리디티 경로는
+/usr/local/Cellar/solidity/0.4.22
+이걸 설치하는데 엄청난 디펜던시들을 설치하고 30분 걸렸다. 맞는건가..  sqllite, openssl 
+
 
 
 
