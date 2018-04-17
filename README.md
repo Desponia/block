@@ -49,5 +49,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["
 인 줄 알았는데 which solc 날려보니 /usr/local/bin/solc
 
 
+> nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --unlock 0,1 --password blockTest/passwd --verbosity 6 2>> blockTest/geth.log &
 
+> geth attach rpc:http://localhost:8545
+
+
+> Fatal: Failed to start the JavaScript console: api modules: Post http://localhost:8545: dial tcp [::1]:8545: connect: connection refused
+
+T.T
 
