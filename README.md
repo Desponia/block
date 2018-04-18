@@ -1,6 +1,7 @@
 # block
 
-> geth --networkid 4649 --nodiscover --maxpeers 0 --datadir data_testnet/ console 2>> data_testnet/geth.log
+
+> geth --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ console 2>> blockTest/geth.log
 
 > geth --datadir data_testnet/ account new
 
@@ -50,6 +51,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["
 
 
 > nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --unlock 0,1 --password blockTest/passwd --verbosity 6 2>> blockTest/geth.log &
+
+geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/eth/data_testnet console 2>> /home/eth/data_testnet/geth.log
+geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/eth/data_testnet console 2>> /home/eth/data_testnet/geth.log
+nohup par --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --unlock 0,1 --password blockTest/passwd --verbosity 6 2>> blockTest/geth.log &
 
 > geth attach rpc:http://localhost:8545
 
