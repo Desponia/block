@@ -52,9 +52,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_newAccount","params":["
 
 > nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --unlock 0,1 --password blockTest/passwd --verbosity 6 2>> blockTest/geth.log &
 
+
+
 geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/eth/data_testnet console 2>> /home/eth/data_testnet/geth.log
-geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/eth/data_testnet console 2>> /home/eth/data_testnet/geth.log
-nohup par --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --unlock 0,1 --password blockTest/passwd --verbosity 6 2>> blockTest/geth.log &
+
+nohup parity --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine --minerthreads 1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpccorsdomain "*" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --unlock 0,1 --password blockTest/passwd --verbosity 6 2>> blockTest/geth.log &
 
 > geth attach rpc:http://localhost:8545
 
@@ -62,4 +64,12 @@ nohup par --networkid 4649 --nodiscover --maxpeers 0 --datadir blockTest/ --mine
 > Fatal: Failed to start the JavaScript console: api modules: Post http://localhost:8545: dial tcp [::1]:8545: connect: connection refused
 
 T.T
+
+
+참고
+http://www.leejungmin.org/post/2017/05/30/mastering-bitcoin/
+
+
+
+
 
